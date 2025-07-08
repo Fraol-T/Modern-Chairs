@@ -3,62 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover our collection of modern, handcrafted chairs. Unique furniture pieces for your home or office.">
+    <meta name="keywords" content="modern chairs, furniture, handcrafted, unique chairs, home decor">
+    <meta property="og:title" content="Modern Chairs - Crafted with Love">
+    <meta property="og:description" content="Discover our collection of modern, handcrafted chairs. Unique furniture pieces for your home or office.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
-    <title>Modern Chairs</title>
+    <title>Modern Chairs - Crafted with Love</title>
 </head>
 <body>
-    <header>
-        <img src="images/Logo.svg" alt="Brand Logo">
-        <section>
-            <h1>Modern Chairs Crafted with Love</h1>
+    <header role="banner">
+        <img src="images/Logo.svg" alt="Modern Chairs Brand Logo" width="64" height="64">
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Modern Chairs Crafted with Love</h1>
             <h3>We love creating high quality and comfortable chairs</h3>
-            <div><a href="#">Discover our chair selection</a></div>
+            <div class="cta-container">
+                <a href="#products" class="cta-button" aria-label="Discover our chair selection">Discover our chair selection</a>
+            </div>
         </section>
     </header>
-    <main>
-        <section id="title">
-            <p id="selection">The selection</p>
-            <h2>Our chairs</h2>
-            <p id="H-L">We mostly sell one-off items. That means that we make one-of-a-kind furniture pieces so whoever buys it will have a unique item.</p>
+    
+    <main role="main">
+        <section id="title" aria-labelledby="section-title">
+            <p id="selection" class="section-label">The selection</p>
+            <h2 id="section-title">Our chairs</h2>
+            <p id="H-L" class="section-description">We mostly sell one-off items. That means that we make one-of-a-kind furniture pieces so whoever buys it will have a unique item.</p>
         </section>
-        <section id="content">
-            <article>
-                <img src="images/item-1.svg" alt="Tufted white leather sofa chair">
-                <h2>01</h2>
-                <p id="name">Tufted white leather sofa chair</p>
-                <p id="dis">This will fit perfectly in any beauty salon or  modern home thanks to its timeless design.</p>
-                <p>$289</p>
+        
+        <section id="content" class="products-grid" aria-labelledby="section-title">
+            <article class="product-card" aria-labelledby="product-1-title">
+                <img src="images/item-1.svg" alt="Tufted white leather sofa chair with elegant design" width="321" height="321">
+                <h3 class="product-number">01</h3>
+                <h4 id="product-1-title" class="product-name">Tufted white leather sofa chair</h4>
+                <p class="product-description">This will fit perfectly in any beauty salon or modern home thanks to its timeless design.</p>
+                <p class="product-price" aria-label="Price">$289</p>
             </article>
-            <article>
-                <img src="images/item-2.svg" alt="Black and brown wooden chair">
-                <h2>02</h2>
-                <p id="name">Black and brown wooden chair</p>
-                <p id="dis">Both minimalistic and comfortable, this is a great choice for home or office.</p>
-                <p>$99</p>
+            
+            <article class="product-card" aria-labelledby="product-2-title">
+                <img src="images/item-2.svg" alt="Black and brown wooden chair with minimalist design" width="321" height="321">
+                <h3 class="product-number">02</h3>
+                <h4 id="product-2-title" class="product-name">Black and brown wooden chair</h4>
+                <p class="product-description">Both minimalistic and comfortable, this is a great choice for home or office.</p>
+                <p class="product-price" aria-label="Price">$99</p>
             </article>
-            <article>
-                <img src="images/item-3.svg" alt="Rustic wooden bar stool">
-                <h2>03</h2>
-                <p id="name">Rustic wooden bar stool</p>
-                <p id="dis">Made from solid beech wood, this piece will fit nicely in your rustic kitchen.</p>
-                <p>$139</p>
+            
+            <article class="product-card" aria-labelledby="product-3-title">
+                <img src="images/item-3.svg" alt="Rustic wooden bar stool made from solid beech wood" width="321" height="321">
+                <h3 class="product-number">03</h3>
+                <h4 id="product-3-title" class="product-name">Rustic wooden bar stool</h4>
+                <p class="product-description">Made from solid beech wood, this piece will fit nicely in your rustic kitchen.</p>
+                <p class="product-price" aria-label="Price">$139</p>
             </article>
         </section>
     </main>
-    <section id="order">
+    
+    <section id="order" class="cta-section" role="complementary" aria-labelledby="order-title">
+        <h2 id="order-title" class="visually-hidden">Order Information</h2>
         <p>Having the right chair in your dining room or in your living room can make all the difference. Order yours today.</p>
-        <button>Order now</button>
+        <a href="#contact" class="order-button" aria-label="Order now">Order now</a>
     </section>
-    <footer>
-        <p id="section">Visit our store</p>
-        <h1>(307) 555-0133</h1>
-        <h3>2972 Westheimer Rd. Santa Ana, Illinois 85486 </h3>
-        <div id="social-links">
-            <img src="images/twitter.svg" alt="Twitter">
-            <img src="images/facebook.svg" alt="Facebook">
-            <img src="images/instagram.svg" alt="Instagram">
-        </div>
+    
+    <footer role="contentinfo">
+        <section class="contact-info" aria-labelledby="contact-title">
+            <p id="contact-title">Visit our store</p>
+            <address>
+                <h2 class="phone-number" aria-label="Phone number">(307) 555-0133</h2>
+                < class="address">2972 Westheimer Rd. Santa Ana, Illinois 85486</>
+            </address>
+        </section>
+        
+        <nav class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Follow us on Twitter">
+                <img src="images/twitter.svg" alt="Twitter" width="48" height="48">
+            </a>
+            <a href="#" aria-label="Follow us on Facebook">
+                <img src="images/facebook.svg" alt="Facebook" width="48" height="48">
+            </a>
+            <a href="#" aria-label="Follow us on Instagram">
+                <img src="images/instagram.svg" alt="Instagram" width="48" height="48">
+            </a>
+        </nav>
     </footer>
-    <small>(c) Copyright 2021 The Chair Company. All rights reserved.</small>
+    
+    <small>&copy; Copyright 2021 The Chair Company. All rights reserved.</small>
 </body>
 </html>
