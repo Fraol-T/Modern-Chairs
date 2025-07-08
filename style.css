@@ -101,22 +101,27 @@ main{
         font-weight: 400px;
         margin-bottom: 32px;
     }
-    button{
+    .order-button{
         width: 131px;
         height: 69px;
         background-color: #000000;
         color: white;
         border-style: none;
+        padding: 16px
        
     }
 }
 footer{
-    
-    h1{
-        margin: 24px 0px;
+    .contact-info{
+        address{
+            .phone-number{
+                margin: 24px 0px;
+                font-size: 42px;
+            }
+        }
     }
-    #social-links{
-        margin: 128px 0px 200px 0px;
+    .social-links{
+        margin: 28px 0px 20px 0px;
         width: 216px;
         height: 48px;
         display: inline-flex;
