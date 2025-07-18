@@ -205,7 +205,6 @@ small {
     grid-gap: 1.5rem;
   }
   main #content .product-card img {
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
