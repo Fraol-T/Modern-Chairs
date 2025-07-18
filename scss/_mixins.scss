@@ -1,0 +1,43 @@
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @content;
+}
+
+@mixin center-col{
+    @include center;
+    flex-direction: column;
+    @content;
+}
+@mixin grid($direction, $rep){
+    display: grid;
+    align-items: center;
+    @if $direction == columns{
+        @if $rep == 1{
+            grid-template-columns: 1fr;
+        }@else if $rep == 2{
+            grid-template-columns: 1fr 1fr;
+        }@else if $rep == 3{
+            grid-template-columns: 1fr 1fr 1fr;
+        }@else if $rep == 4{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }@else if $direction == rows{
+        @if $rep == 1{
+            grid-template-rows: 1fr;
+        }@else if $rep == 2{
+            grid-template-rows: 1fr 1fr;
+        }@else if $rep == 3{
+            grid-template-rows: 1fr 1fr 1fr;
+        }@else if $rep == 4{
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+    }
+    @content;
+}
+@mixin measurement($width, $height){
+    width: $width;
+    height: $height;
+    @content;
+}

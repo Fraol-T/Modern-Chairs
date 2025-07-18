@@ -41,9 +41,11 @@ header{
             justify-content: center;
 
             a{
+                
                 color: #000000;
             }
         }
+        
     }
 }
 main,
