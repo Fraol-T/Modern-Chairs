@@ -1,0 +1,184 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'roboto', sans-serif;
+    color: $main;
+    @include center-col;
+    
+}
+header{
+    @include center-col;
+    margin-top: 8rem;
+    margin-bottom: 15rem;
+    img{
+        margin-bottom: 8rem;
+    }
+    section{
+        @include center-col;
+        h1{
+            font-size: 3.56rem;
+            font-family: 700;
+        }
+        h3{
+            font-size: 2rem;
+            font-weight: 300;
+            margin: 2rem 0;
+        }
+        .cta-container{
+            @include measurement(16.87rem,4.31rem);
+            background-color: $gray;
+            padding: 1.5rem;
+            a{
+                color: black;
+                font-size: 1.12rem;
+                text-decoration: none;
+            }
+        }
+    }
+}
+main{
+    @include center-col;
+    margin-bottom: 15rem;
+    #title{
+        margin-bottom: 4rem;
+        @include center-col{
+            gap: 1.5rem;
+            text-align: center;
+        }
+        @include measurement(40rem, 10rem);
+        #selection{
+            text-transform: uppercase;
+            font-size: 1.12rem;
+            font-weight: 300;
+        }
+        #section-title{
+            font-size: 2.68rem;
+            font-weight: 700;
+        }
+    }
+    #content{
+        @include grid(columns,3){
+            grid-gap: 2rem;
+        }
+        width: 78.87rem;;
+        .product-card{
+            width: 23.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            color: black;
+            img{
+                width: fit-content;
+            }
+            .product-number{
+                font-size: 2.68rem;
+                font-weight: 100;
+            }
+            .product-title{
+                font-weight: 700;
+            }
+            .product-title,
+            .product-description,
+            .product-price{
+                font-size: 1.12rem;
+            }
+        }
+    }
+}
+#order{
+    @include center-col{
+        padding: 8rem;
+        gap: 2rem;
+        text-align: center;
+    }
+    @include measurement(78.87rem,25.8rem);
+    background-color: $gray;
+    h2{
+        display: none;
+    }
+    p{
+        width: 40rem;
+        font-size: 1.5rem;
+    }
+    a{
+        @include measurement(8rem,4.3rem);
+        @include center;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+    margin-bottom: 15rem;
+}
+footer{
+    .contact-info{
+        @include center-col{
+            gap: 1.5rem;
+        }
+        #content-title{
+            font-size: 1.12rem;
+            font-weight: 400;
+        }
+        address{
+            text-align: center;
+        }
+        address .phone-number{
+            font-size: 3.56rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        address p{
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        margin-bottom: 8.25rem;
+    }
+    nav{
+        @include center{
+            gap: 3rem;
+        }    
+    }
+    margin-bottom: 15rem;
+}
+small{
+    margin-bottom: 1.75rem;
+}
+@media (min-width: 1399px){
+    html{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1399px){
+    html{
+        font-size: 12px;
+    }
+}
+@media (min-width: 767px) and (max-width: 1023px){
+    html{
+        font-size: 10px;
+    }
+}
+@media (min-width: 320px) and (max-width:766px){
+    html{
+        font-size: 8px;
+    }
+    main{
+        #content{
+            @include center-col{
+                grid-gap: 1.5rem;
+            }
+            .product-card{
+                img{
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
