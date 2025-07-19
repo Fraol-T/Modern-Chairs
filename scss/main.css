@@ -18,11 +18,12 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 8rem;
-  margin-bottom: 15rem;
+  text-align: center;
+  padding: 0 2rem;
+  margin: 4rem 0;
 }
 header img {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 header section {
   display: flex;
@@ -31,11 +32,11 @@ header section {
   flex-direction: column;
 }
 header section h1 {
-  font-size: 3.56rem;
-  font-family: 700;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 header section h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   margin: 2rem 0;
 }
@@ -56,18 +57,18 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 15rem;
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 8rem;
 }
 main #title {
+  text-align: center;
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
-  text-align: center;
-  width: 40rem;
-  height: 10rem;
 }
 main #title #selection {
   text-transform: uppercase;
@@ -75,35 +76,33 @@ main #title #selection {
   font-weight: 300;
 }
 main #title #section-title {
-  font-size: 2.68rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 main #content {
   display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
-  width: 78.87rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
 }
 main #content .product-card {
-  width: 23.6rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   color: black;
 }
 main #content .product-card img {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  height: auto;
 }
 main #content .product-card .product-number {
-  font-size: 2.68rem;
+  font-size: 2rem;
   font-weight: 100;
 }
-main #content .product-card .product-title {
+main #content .product-card .product-name {
   font-weight: 700;
 }
-main #content .product-card .product-title,
+main #content .product-card .product-name,
 main #content .product-card .product-description,
 main #content .product-card .product-price {
   font-size: 1.12rem;
@@ -114,20 +113,18 @@ main #content .product-card .product-price {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 8rem;
+  padding: 4rem 2rem;
   gap: 2rem;
   text-align: center;
-  width: 78.87rem;
-  height: 25.8rem;
+  width: 100%;
   background-color: #BDBDBD;
-  margin-bottom: 15rem;
+  margin-bottom: 8rem;
 }
 #order h2 {
   display: none;
 }
 #order p {
-  width: 40rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 #order a {
   width: 8rem;
@@ -141,7 +138,8 @@ main #content .product-card .product-price {
 }
 
 footer {
-  margin-bottom: 15rem;
+  text-align: center;
+  margin-bottom: 8rem;
 }
 footer .contact-info {
   display: flex;
@@ -149,9 +147,9 @@ footer .contact-info {
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 8.25rem;
+  margin-bottom: 4rem;
 }
-footer .contact-info #content-title {
+footer .contact-info #contact-title {
   font-size: 1.12rem;
   font-weight: 400;
 }
@@ -159,52 +157,57 @@ footer .contact-info address {
   text-align: center;
 }
 footer .contact-info address .phone-number {
-  font-size: 3.56rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 footer .contact-info address p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 footer nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 small {
   margin-bottom: 1.75rem;
 }
 
-@media (min-width: 1399px) {
-  html {
-    font-size: 16px;
+@media (min-width: 768px) {
+  main #content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1024px) and (max-width: 1399px) {
-  html {
-    font-size: 12px;
+@media (min-width: 1024px) {
+  header section h1 {
+    font-size: 3.56rem;
   }
-}
-@media (min-width: 767px) and (max-width: 1023px) {
-  html {
-    font-size: 10px;
+  header section h3 {
+    font-size: 2rem;
   }
-}
-@media (min-width: 320px) and (max-width: 766px) {
-  html {
-    font-size: 8px;
+  main {
+    max-width: 78.87rem;
+  }
+  main #title #section-title {
+    font-size: 2.68rem;
   }
   main #content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
   }
-  main #content .product-card img {
-    width: 100%;
+  #order {
+    max-width: 78.87rem;
+  }
+  #order p {
+    width: 40rem;
+    font-size: 1.5rem;
+  }
+  footer .contact-info address .phone-number {
+    font-size: 3.56rem;
+  }
+  footer .contact-info address p {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
